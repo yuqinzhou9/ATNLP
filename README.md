@@ -1,22 +1,26 @@
 # ATNLP
 
 # Individual project
-The results are available at https://wandb.ai/yuqinzhou/ATNLP?workspace=user-yuqinzhou
-Here are the name conventions:
-"simple_split_hyper" is the hyperparameter search for exp1 using the transformer
-"len_split_hyper" is the hyperparameter search for exp2 using the transformer
-For the name like this "Exp1_var02_overall_0", it means the first run using the overall best models trained based on the 2% proportion of the Exp1 datasets. 
+The results are available at https://wandb.ai/yuqinzhou/ATNLP?workspace=user-yuqinzhou. Here are the name conventions:
+"simple_split_hyper" is the hyperparameter search for exp1 using the transformer  
 
+"len_split_hyper" is the hyperparameter search for exp2 using the transformer  
+
+For the name like this "Exp1_var02_overall_0", it means the first run using the overall best models trained based on the 2% proportion of the Exp1 datasets.  
+
+To reproduce the results, the "transformer" folder contains:
 
 |Name |Description|
 |-----|--------|
-|Exp1 |Simple split and random subset models |
-|ATNLP_transformer_length |Exp2 Length split|
+|ATNLP_transformer_hyper | Hyperparameter search for exp1 and exp2 using the transformer |
+|ATNLP_simple_32p|Exmaple code of the overall best model trained based on the 32% proportion of the Exp1 |
+|transformer_pos | transformer models with fixed positional embeddings |
+|transformer_new | transformer models with learnable positional embeddings |
 
 
 
 # Group project
-This directory contains python notebooks necessary to replicate the results of Lake, B., & Barocni, M. (2018, July). Generalization without systematicity: On the compositional skills of sequence-to-sequence recurrent networks. In International conference on machine learning (pp. 2873-2882). PMLR. Each notebook are named with the experiment they contain, and a description is seen below:
+The "Reimplementation" folder contains:
 
 |Name |Description|
 |-----|--------|
@@ -27,6 +31,3 @@ This directory contains python notebooks necessary to replicate the results of L
 |Exp3c |Error inspection of experiment 3a and 3b|
 |Exp3d |Cosine similarity |
 |Exp3e |Model with different amount of compositional jump commands|
-
-First, you need to download the SCAN tasks used as training and test data in this model. They can be cloned from this repository https://github.com/brendenlake/SCAN. Clone it to you desktop and rename the repository "SCAN-master". 
-Open either of the notebooks and replace the os.chdir() with the directory where you have both the folder with the notebooks and the SCAN-master folder. Then, you can run the entire notebook to reproduce results.
