@@ -1,7 +1,22 @@
 # ATNLP
 
 # Individual project
-This directory contains python notebooks necessary to replicate the results of Lake, B., & Baroni, M. (2018, July). Generalization without systematicity: On the compositional skills of sequence-to-sequence recurrent networks. In International conference on machine learning (pp. 2873-2882). PMLR. Each notebook are named with the experiment they contain, and a description is seen below:
+The results are available at https://wandb.ai/yuqinzhou/ATNLP?workspace=user-yuqinzhou
+Here are the name conventions:
+"simple_split_hyper" is the hyperparameter search for exp1 using the transformer
+"len_split_hyper" is the hyperparameter search for exp2 using the transformer
+For the name like this "Exp1_var02_overall_0", it means the first run using the overall best models trained based on the 2% proportion of the Exp1 datasets. 
+
+
+|Name |Description|
+|-----|--------|
+|Exp1 |Simple split and random subset models |
+|ATNLP_transformer_length |Exp2 Length split|
+
+
+
+# Group project
+This directory contains python notebooks necessary to replicate the results of Lake, B., & Barocni, M. (2018, July). Generalization without systematicity: On the compositional skills of sequence-to-sequence recurrent networks. In International conference on machine learning (pp. 2873-2882). PMLR. Each notebook are named with the experiment they contain, and a description is seen below:
 
 |Name |Description|
 |-----|--------|
